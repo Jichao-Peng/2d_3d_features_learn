@@ -10,6 +10,7 @@
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/visualization/range_image_visualizer.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/keypoints/harris_3d.h>
 #include <pcl/common/io.h>
@@ -33,12 +34,10 @@ namespace Feature3d
 
     private:
         //3D-SIFT
-        void DetectSIFTKeypoints(PointCloud<PointXYZRGB>::Ptr &points, float minScale, int nrOctaves, int nrScalesPerOctave,
-                            float minContrast, PointCloud<PointWithScale>::Ptr &keypoints);
+        void DetectSIFTKeypoints(PointCloud<PointXYZRGB>::Ptr &points, PointCloud<PointWithScale>::Ptr &keypoints);
 
         //3D-Harris
-        void DetectHarrisKeypoints(PointCloud<PointXYZRGB>::Ptr &points, float threshold,
-                                   PointCloud<PointXYZI>::Ptr &keypoints);
+        void DetectHarrisKeypoints(PointCloud<PointXYZRGB>::Ptr &points, PointCloud<PointXYZI>::Ptr &keypoints);
 
         //ISS
         void DetectISSKeypoints(PointCloud<PointXYZRGB>::Ptr &points, PointCloud<PointXYZRGB>::Ptr &keypoints);

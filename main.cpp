@@ -3,9 +3,10 @@
 #include "feature2d.h"
 
 
-int main() {
+int main()
+{
     Feature2d::Feature2d feature2d;
     Feature3d::Feature3d feature3d;
-    feature3d.Run("PCDdata/bunny.pcd", Feature3d::ISS);
-    //feature2d.Run("1.jpg",Feature2d::ORB);
+    feature3d.Run("PCDdata/bunny.pcd", Feature3d::NARF);
+    //feature2d.Run("1.jpg", "1.png", Feature2d::ORB);
 }

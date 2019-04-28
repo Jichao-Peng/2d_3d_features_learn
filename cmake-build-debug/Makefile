@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/leo/Desktop/code/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named transform
+
+# Build rule for target.
+transform: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 transform
+.PHONY : transform
+
+# fast build rule for target.
+transform/fast:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/build
+.PHONY : transform/fast
+
+#=============================================================================
+# Target rules for targets named SHOT
+
+# Build rule for target.
+SHOT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SHOT
+.PHONY : SHOT
+
+# fast build rule for target.
+SHOT/fast:
+	$(MAKE) -f CMakeFiles/SHOT.dir/build.make CMakeFiles/SHOT.dir/build
+.PHONY : SHOT/fast
+
+#=============================================================================
 # Target rules for targets named code
 
 # Build rule for target.
@@ -122,6 +148,73 @@ code: cmake_check_build_system
 code/fast:
 	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/build
 .PHONY : code/fast
+
+#=============================================================================
+# Target rules for targets named FPFP
+
+# Build rule for target.
+FPFP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FPFP
+.PHONY : FPFP
+
+# fast build rule for target.
+FPFP/fast:
+	$(MAKE) -f CMakeFiles/FPFP.dir/build.make CMakeFiles/FPFP.dir/build
+.PHONY : FPFP/fast
+
+FPFP.o: FPFP.cpp.o
+
+.PHONY : FPFP.o
+
+# target to build an object file
+FPFP.cpp.o:
+	$(MAKE) -f CMakeFiles/FPFP.dir/build.make CMakeFiles/FPFP.dir/FPFP.cpp.o
+.PHONY : FPFP.cpp.o
+
+FPFP.i: FPFP.cpp.i
+
+.PHONY : FPFP.i
+
+# target to preprocess a source file
+FPFP.cpp.i:
+	$(MAKE) -f CMakeFiles/FPFP.dir/build.make CMakeFiles/FPFP.dir/FPFP.cpp.i
+.PHONY : FPFP.cpp.i
+
+FPFP.s: FPFP.cpp.s
+
+.PHONY : FPFP.s
+
+# target to generate assembly for a file
+FPFP.cpp.s:
+	$(MAKE) -f CMakeFiles/FPFP.dir/build.make CMakeFiles/FPFP.dir/FPFP.cpp.s
+.PHONY : FPFP.cpp.s
+
+SHOT.o: SHOT.cpp.o
+
+.PHONY : SHOT.o
+
+# target to build an object file
+SHOT.cpp.o:
+	$(MAKE) -f CMakeFiles/SHOT.dir/build.make CMakeFiles/SHOT.dir/SHOT.cpp.o
+.PHONY : SHOT.cpp.o
+
+SHOT.i: SHOT.cpp.i
+
+.PHONY : SHOT.i
+
+# target to preprocess a source file
+SHOT.cpp.i:
+	$(MAKE) -f CMakeFiles/SHOT.dir/build.make CMakeFiles/SHOT.dir/SHOT.cpp.i
+.PHONY : SHOT.cpp.i
+
+SHOT.s: SHOT.cpp.s
+
+.PHONY : SHOT.s
+
+# target to generate assembly for a file
+SHOT.cpp.s:
+	$(MAKE) -f CMakeFiles/SHOT.dir/build.make CMakeFiles/SHOT.dir/SHOT.cpp.s
+.PHONY : SHOT.cpp.s
 
 feature2d.o: feature2d.cpp.o
 
@@ -204,15 +297,51 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/code.dir/build.make CMakeFiles/code.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+transform.o: transform.cpp.o
+
+.PHONY : transform.o
+
+# target to build an object file
+transform.cpp.o:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/transform.cpp.o
+.PHONY : transform.cpp.o
+
+transform.i: transform.cpp.i
+
+.PHONY : transform.i
+
+# target to preprocess a source file
+transform.cpp.i:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/transform.cpp.i
+.PHONY : transform.cpp.i
+
+transform.s: transform.cpp.s
+
+.PHONY : transform.s
+
+# target to generate assembly for a file
+transform.cpp.s:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/transform.cpp.s
+.PHONY : transform.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... code"
 	@echo "... edit_cache"
+	@echo "... transform"
+	@echo "... rebuild_cache"
+	@echo "... SHOT"
+	@echo "... code"
+	@echo "... FPFP"
+	@echo "... FPFP.o"
+	@echo "... FPFP.i"
+	@echo "... FPFP.s"
+	@echo "... SHOT.o"
+	@echo "... SHOT.i"
+	@echo "... SHOT.s"
 	@echo "... feature2d.o"
 	@echo "... feature2d.i"
 	@echo "... feature2d.s"
@@ -222,6 +351,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... transform.o"
+	@echo "... transform.i"
+	@echo "... transform.s"
 .PHONY : help
 
 

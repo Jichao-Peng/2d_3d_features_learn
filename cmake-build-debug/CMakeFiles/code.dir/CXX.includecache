@@ -16,10 +16,6 @@ opencv2/xfeatures2d.hpp
 vector
 -
 
-/home/leo/Desktop/code/feature3d.cpp
-feature3d.h
-/home/leo/Desktop/code/feature3d.h
-
 /home/leo/Desktop/code/feature3d.h
 pcl/keypoints/sift_keypoint.h
 -
@@ -30,6 +26,8 @@ pcl/kdtree/kdtree_flann.h
 pcl/io/pcd_io.h
 -
 pcl/visualization/pcl_visualizer.h
+-
+pcl/visualization/range_image_visualizer.h
 -
 pcl/features/normal_3d.h
 -
@@ -2400,6 +2398,54 @@ Eigen/Geometry
 Eigen/Dense
 -
 
+/usr/include/pcl-1.8/pcl/visualization/image_viewer.h
+pcl/pcl_macros.h
+-
+pcl/point_types.h
+-
+pcl/console/print.h
+-
+pcl/visualization/interactor.h
+-
+pcl/visualization/interactor_style.h
+-
+pcl/visualization/vtk/pcl_image_canvas_source_2d.h
+-
+pcl/visualization/vtk/pcl_context_item.h
+-
+pcl/geometry/planar_polygon.h
+-
+pcl/correspondence.h
+-
+boost/shared_array.hpp
+-
+vtkVersion.h
+-
+vtkInteractorStyleImage.h
+-
+pcl/visualization/impl/image_viewer.hpp
+-
+
+/usr/include/pcl-1.8/pcl/visualization/impl/image_viewer.hpp
+vtkVersion.h
+-
+vtkContextActor.h
+-
+vtkContextScene.h
+-
+vtkImageData.h
+-
+vtkImageFlip.h
+-
+vtkPointData.h
+-
+vtkImageViewer.h
+-
+pcl/visualization/common/common.h
+-
+pcl/search/organized.h
+-
+
 /usr/include/pcl-1.8/pcl/visualization/impl/pcl_visualizer.hpp
 vtkVersion.h
 -
@@ -2462,6 +2508,24 @@ pcl/common/colors.h
 
 /usr/include/pcl-1.8/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
 pcl/pcl_macros.h
+-
+
+/usr/include/pcl-1.8/pcl/visualization/interactor.h
+pcl/pcl_macros.h
+-
+vtkConfigure.h
+-
+vtkObjectFactory.h
+-
+vtkWin32RenderWindowInteractor.h
+-
+vtkConfigure.h
+-
+vtkCocoaRenderWindowInteractor.h
+-
+vtkCarbonRenderWindowInteractor.h
+-
+vtkXRenderWindowInteractor.h
 -
 
 /usr/include/pcl-1.8/pcl/visualization/interactor_style.h
@@ -2566,6 +2630,28 @@ vector
 vtkCommand.h
 -
 
+/usr/include/pcl-1.8/pcl/visualization/range_image_visualizer.h
+pcl/pcl_config.h
+-
+pcl/range_image/range_image.h
+-
+pcl/visualization/image_viewer.h
+-
+
+/usr/include/pcl-1.8/pcl/visualization/vtk/pcl_context_item.h
+pcl/pcl_macros.h
+-
+vtkContextItem.h
+-
+vector
+-
+
+/usr/include/pcl-1.8/pcl/visualization/vtk/pcl_image_canvas_source_2d.h
+pcl/pcl_macros.h
+-
+vtkImageCanvasSource2D.h
+-
+
 /usr/include/vtk-6.3/vtkABI.h
 
 /usr/include/vtk-6.3/vtkAbstractArray.h
@@ -2575,6 +2661,12 @@ vtkObject.h
 /usr/include/vtk-6.3/vtkObject.h
 vtkVariant.h
 /usr/include/vtk-6.3/vtkVariant.h
+
+/usr/include/vtk-6.3/vtkAbstractContextItem.h
+vtkRenderingContext2DModule.h
+/usr/include/vtk-6.3/vtkRenderingContext2DModule.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
 
 /usr/include/vtk-6.3/vtkAbstractMapper.h
 vtkRenderingCoreModule.h
@@ -2768,6 +2860,32 @@ vtkDebugLeaksManager.h
 vtkVersionMacros.h
 /usr/include/vtk-6.3/vtkVersionMacros.h
 
+/usr/include/vtk-6.3/vtkContextActor.h
+vtkRenderingContext2DModule.h
+/usr/include/vtk-6.3/vtkRenderingContext2DModule.h
+vtkProp.h
+/usr/include/vtk-6.3/vtkProp.h
+vtkNew.h
+/usr/include/vtk-6.3/vtkNew.h
+vtkSmartPointer.h
+/usr/include/vtk-6.3/vtkSmartPointer.h
+
+/usr/include/vtk-6.3/vtkContextItem.h
+vtkRenderingContext2DModule.h
+/usr/include/vtk-6.3/vtkRenderingContext2DModule.h
+vtkAbstractContextItem.h
+/usr/include/vtk-6.3/vtkAbstractContextItem.h
+
+/usr/include/vtk-6.3/vtkContextScene.h
+vtkRenderingContext2DModule.h
+/usr/include/vtk-6.3/vtkRenderingContext2DModule.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
+vtkWeakPointer.h
+/usr/include/vtk-6.3/vtkWeakPointer.h
+vtkVector.h
+/usr/include/vtk-6.3/vtkVector.h
+
 /usr/include/vtk-6.3/vtkCoordinate.h
 vtkRenderingCoreModule.h
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
@@ -2894,6 +3012,12 @@ vtkFiltersCoreModule.h
 vtkFiltersCoreModule.h
 /usr/include/vtk-6.3/vtkFiltersCoreModule.h
 
+/usr/include/vtk-6.3/vtkFiltersHybridModule.h
+vtkFiltersGeneralModule.h
+/usr/include/vtk-6.3/vtkFiltersGeneralModule.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+
 /usr/include/vtk-6.3/vtkFiltersModelingModule.h
 vtkFiltersGeneralModule.h
 /usr/include/vtk-6.3/vtkFiltersGeneralModule.h
@@ -2917,6 +3041,10 @@ vtkRenderingCoreModule.h
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
 vtkActor.h
 /usr/include/vtk-6.3/vtkActor.h
+
+/usr/include/vtk-6.3/vtkIOImageModule.h
+vtkAutoInit.h
+/usr/include/vtk-6.3/vtkAutoInit.h
 
 /usr/include/vtk-6.3/vtkIOStream.h
 vtkCommonCoreModule.h
@@ -2957,6 +3085,56 @@ vtkCommonExecutionModelModule.h
 /usr/include/vtk-6.3/vtkCommonExecutionModelModule.h
 vtkAlgorithm.h
 /usr/include/vtk-6.3/vtkAlgorithm.h
+
+/usr/include/vtk-6.3/vtkImageCanvasSource2D.h
+vtkImagingSourcesModule.h
+/usr/include/vtk-6.3/vtkImagingSourcesModule.h
+vtkImageAlgorithm.h
+/usr/include/vtk-6.3/vtkImageAlgorithm.h
+
+/usr/include/vtk-6.3/vtkImageData.h
+vtkCommonDataModelModule.h
+/usr/include/vtk-6.3/vtkCommonDataModelModule.h
+vtkDataSet.h
+/usr/include/vtk-6.3/vtkDataSet.h
+vtkStructuredData.h
+/usr/include/vtk-6.3/vtkStructuredData.h
+
+/usr/include/vtk-6.3/vtkImageFlip.h
+vtkImagingCoreModule.h
+/usr/include/vtk-6.3/vtkImagingCoreModule.h
+vtkImageReslice.h
+/usr/include/vtk-6.3/vtkImageReslice.h
+
+/usr/include/vtk-6.3/vtkImageMapper.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkMapper2D.h
+/usr/include/vtk-6.3/vtkMapper2D.h
+
+/usr/include/vtk-6.3/vtkImageReslice.h
+vtkImagingCoreModule.h
+/usr/include/vtk-6.3/vtkImagingCoreModule.h
+vtkThreadedImageAlgorithm.h
+/usr/include/vtk-6.3/vtkThreadedImageAlgorithm.h
+
+/usr/include/vtk-6.3/vtkImageViewer.h
+vtkInteractionImageModule.h
+/usr/include/vtk-6.3/vtkInteractionImageModule.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
+vtkImageMapper.h
+/usr/include/vtk-6.3/vtkImageMapper.h
+vtkRenderWindow.h
+/usr/include/vtk-6.3/vtkRenderWindow.h
+
+/usr/include/vtk-6.3/vtkImagingCoreModule.h
+
+/usr/include/vtk-6.3/vtkImagingHybridModule.h
+vtkIOImageModule.h
+/usr/include/vtk-6.3/vtkIOImageModule.h
+
+/usr/include/vtk-6.3/vtkImagingSourcesModule.h
 
 /usr/include/vtk-6.3/vtkIndent.h
 vtkCommonCoreModule.h
@@ -3008,11 +3186,37 @@ vtkDataArray.h
 vtkDataArrayTemplate.h
 /usr/include/vtk-6.3/vtkDataArrayTemplate.h
 
+/usr/include/vtk-6.3/vtkInteractionImageModule.h
+vtkInteractionStyleModule.h
+/usr/include/vtk-6.3/vtkInteractionStyleModule.h
+vtkInteractionWidgetsModule.h
+/usr/include/vtk-6.3/vtkInteractionWidgetsModule.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkRenderingFreeTypeModule.h
+/usr/include/vtk-6.3/vtkRenderingFreeTypeModule.h
+
 /usr/include/vtk-6.3/vtkInteractionStyleModule.h
 vtkRenderingCoreModule.h
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
 vtkAutoInit.h
 /usr/include/vtk-6.3/vtkAutoInit.h
+
+/usr/include/vtk-6.3/vtkInteractionWidgetsModule.h
+vtkFiltersHybridModule.h
+/usr/include/vtk-6.3/vtkFiltersHybridModule.h
+vtkFiltersModelingModule.h
+/usr/include/vtk-6.3/vtkFiltersModelingModule.h
+vtkImagingHybridModule.h
+/usr/include/vtk-6.3/vtkImagingHybridModule.h
+vtkInteractionStyleModule.h
+/usr/include/vtk-6.3/vtkInteractionStyleModule.h
+vtkRenderingAnnotationModule.h
+/usr/include/vtk-6.3/vtkRenderingAnnotationModule.h
+vtkRenderingFreeTypeModule.h
+/usr/include/vtk-6.3/vtkRenderingFreeTypeModule.h
+vtkRenderingVolumeModule.h
+/usr/include/vtk-6.3/vtkRenderingVolumeModule.h
 
 /usr/include/vtk-6.3/vtkInteractorObserver.h
 vtkRenderingCoreModule.h
@@ -3025,6 +3229,12 @@ vtkRenderingCoreModule.h
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
 vtkInteractorObserver.h
 /usr/include/vtk-6.3/vtkInteractorObserver.h
+
+/usr/include/vtk-6.3/vtkInteractorStyleImage.h
+vtkInteractionStyleModule.h
+/usr/include/vtk-6.3/vtkInteractionStyleModule.h
+vtkInteractorStyleTrackballCamera.h
+/usr/include/vtk-6.3/vtkInteractorStyleTrackballCamera.h
 
 /usr/include/vtk-6.3/vtkInteractorStyleRubberBandPick.h
 vtkInteractionStyleModule.h
@@ -3088,6 +3298,12 @@ vtkSystemIncludes.h
 vtkSmartPointer.h
 /usr/include/vtk-6.3/vtkSmartPointer.h
 
+/usr/include/vtk-6.3/vtkMapper2D.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkAbstractMapper.h
+/usr/include/vtk-6.3/vtkAbstractMapper.h
+
 /usr/include/vtk-6.3/vtkMath.h
 vtkCommonCoreModule.h
 /usr/include/vtk-6.3/vtkCommonCoreModule.h
@@ -3109,6 +3325,10 @@ vtkCommonMathModule.h
 /usr/include/vtk-6.3/vtkCommonMathModule.h
 vtkObject.h
 /usr/include/vtk-6.3/vtkObject.h
+
+/usr/include/vtk-6.3/vtkNew.h
+vtkIOStream.h
+/usr/include/vtk-6.3/vtkIOStream.h
 
 /usr/include/vtk-6.3/vtkOStrStreamWrapper.h
 
@@ -3230,6 +3450,18 @@ vtkRenderingCoreModule.h
 vtkObject.h
 /usr/include/vtk-6.3/vtkObject.h
 
+/usr/include/vtk-6.3/vtkRenderWindow.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkWindow.h
+/usr/include/vtk-6.3/vtkWindow.h
+
+/usr/include/vtk-6.3/vtkRenderWindowInteractor.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
+
 /usr/include/vtk-6.3/vtkRenderer.h
 vtkRenderingCoreModule.h
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
@@ -3252,6 +3484,12 @@ vtkRenderer.h
 vtkRenderingFreeTypeModule.h
 /usr/include/vtk-6.3/vtkRenderingFreeTypeModule.h
 
+/usr/include/vtk-6.3/vtkRenderingContext2DModule.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkAutoInit.h
+/usr/include/vtk-6.3/vtkAutoInit.h
+
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
 vtkAutoInit.h
 /usr/include/vtk-6.3/vtkAutoInit.h
@@ -3269,6 +3507,22 @@ vtkFiltersModelingModule.h
 /usr/include/vtk-6.3/vtkFiltersModelingModule.h
 vtkRenderingCoreModule.h
 /usr/include/vtk-6.3/vtkRenderingCoreModule.h
+
+/usr/include/vtk-6.3/vtkRenderingOpenGLConfigure.h
+
+/usr/include/vtk-6.3/vtkRenderingOpenGLModule.h
+vtkRenderingOpenGLConfigure.h
+/usr/include/vtk-6.3/vtkRenderingOpenGLConfigure.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkAutoInit.h
+/usr/include/vtk-6.3/vtkAutoInit.h
+
+/usr/include/vtk-6.3/vtkRenderingVolumeModule.h
+vtkRenderingCoreModule.h
+/usr/include/vtk-6.3/vtkRenderingCoreModule.h
+vtkAutoInit.h
+/usr/include/vtk-6.3/vtkAutoInit.h
 
 /usr/include/vtk-6.3/vtkScalarsToColors.h
 vtkCommonCoreModule.h
@@ -3316,6 +3570,12 @@ vtkSystemIncludes.h
 string
 -
 
+/usr/include/vtk-6.3/vtkStructuredData.h
+vtkCommonDataModelModule.h
+/usr/include/vtk-6.3/vtkCommonDataModelModule.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
+
 /usr/include/vtk-6.3/vtkSystemIncludes.h
 vtkWin32Header.h
 /usr/include/vtk-6.3/vtkWin32Header.h
@@ -3352,11 +3612,29 @@ vtkRenderingCoreModule.h
 vtkImageAlgorithm.h
 /usr/include/vtk-6.3/vtkImageAlgorithm.h
 
+/usr/include/vtk-6.3/vtkThreadedImageAlgorithm.h
+vtkCommonExecutionModelModule.h
+/usr/include/vtk-6.3/vtkCommonExecutionModelModule.h
+vtkImageAlgorithm.h
+/usr/include/vtk-6.3/vtkImageAlgorithm.h
+
 /usr/include/vtk-6.3/vtkTimeStamp.h
 vtkCommonCoreModule.h
 /usr/include/vtk-6.3/vtkCommonCoreModule.h
 vtkSystemIncludes.h
 /usr/include/vtk-6.3/vtkSystemIncludes.h
+
+/usr/include/vtk-6.3/vtkTuple.h
+vtkIOStream.h
+/usr/include/vtk-6.3/vtkIOStream.h
+vtkSystemIncludes.h
+/usr/include/vtk-6.3/vtkSystemIncludes.h
+cassert
+-
+cstdlib
+-
+cmath
+-
 
 /usr/include/vtk-6.3/vtkType.h
 vtkConfigure.h
@@ -3454,6 +3732,14 @@ typeinfo
 climits
 -
 
+/usr/include/vtk-6.3/vtkVector.h
+vtkTuple.h
+/usr/include/vtk-6.3/vtkTuple.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
+cmath
+-
+
 /usr/include/vtk-6.3/vtkVectorText.h
 vtkRenderingFreeTypeModule.h
 /usr/include/vtk-6.3/vtkRenderingFreeTypeModule.h
@@ -3490,6 +3776,10 @@ vtkPropCollection.h
 vtkVolume.h
 /usr/include/vtk-6.3/vtkVolume.h
 
+/usr/include/vtk-6.3/vtkWeakPointer.h
+vtkWeakPointerBase.h
+/usr/include/vtk-6.3/vtkWeakPointerBase.h
+
 /usr/include/vtk-6.3/vtkWeakPointerBase.h
 vtkCommonCoreModule.h
 /usr/include/vtk-6.3/vtkCommonCoreModule.h
@@ -3502,5 +3792,21 @@ vtkConfigure.h
 vtkABI.h
 /usr/include/vtk-6.3/vtkABI.h
 windows.h
+-
+
+/usr/include/vtk-6.3/vtkWindow.h
+vtkCommonCoreModule.h
+/usr/include/vtk-6.3/vtkCommonCoreModule.h
+vtkObject.h
+/usr/include/vtk-6.3/vtkObject.h
+
+/usr/include/vtk-6.3/vtkXRenderWindowInteractor.h
+vtkRenderingOpenGLModule.h
+/usr/include/vtk-6.3/vtkRenderingOpenGLModule.h
+vtkRenderWindowInteractor.h
+/usr/include/vtk-6.3/vtkRenderWindowInteractor.h
+X11/StringDefs.h
+-
+X11/Intrinsic.h
 -
 

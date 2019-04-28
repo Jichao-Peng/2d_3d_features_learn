@@ -21,7 +21,7 @@ namespace Feature2d
     class Feature2d
     {
     public:
-        void Run(string filePath, Method method);
+        void Run(string filePath1, string filePath2, Method method);
 
     private:
         //Harris
@@ -29,13 +29,13 @@ namespace Feature2d
         void FindSubKeypoints(Mat &graySrc, vector<Point2f> &outputCorners);
 
         //SIFT
-        void DetectSIFTKeypoints(Mat &colorSrc, vector<KeyPoint> &keypoints);
+        void DetectSIFTKeypoints(Mat &colorSrc, vector<KeyPoint> &keypoints, Mat& descriptor);
 
         //SUFT
-        void DetectSURFKeypoints(Mat &colorSrc, vector<KeyPoint> &keypoints);
+        void DetectSURFKeypoints(Mat &colorSrc, vector<KeyPoint> &keypoints, Mat& descriptor);
 
         //ORB
-        void DetectORBKeypoints(Mat &colorSr, vector<KeyPoint> &keypoints);
+        void DetectORBKeypoints(Mat &colorSr, vector<KeyPoint> &keypoints, Mat& descriptor);
     };
 
 }

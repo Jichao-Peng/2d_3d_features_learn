@@ -8,7 +8,15 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${PCL_INCLUDE_DIRS})
-
 add_executable(${PROJECT_NAME} main.cpp feature3d.cpp feature3d.h feature2d.cpp feature2d.h)
-
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} ${PCL_LIBRARIES})
+
+add_executable(FPFP FPFP.cpp )
+target_link_libraries(FPFP ${PCL_LIBRARIES})
+
+add_executable(SHOT SHOT.cpp )
+target_link_libraries(SHOT ${PCL_LIBRARIES})
+
+add_executable(transform transform.cpp )
+target_link_libraries(transform ${PCL_LIBRARIES})
+
